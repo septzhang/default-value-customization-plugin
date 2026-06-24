@@ -1,0 +1,45 @@
+{
+  "fields": [
+    {
+      "customFieldId": "default_value_custom",
+      "fieldType": 20,
+      "iconSvgUrl": "",
+      "name": "默认值自定义",
+      "externalData": {
+        "formulaTemplate": "[{$ sourceField.name $}]"
+      },
+      "uiSchema": {
+        "fieldsConfigEditor": {
+          "component": "openFieldMetaEditor",
+          "props": {
+            "schema": {
+              "items": [
+                {
+                  "key": "sourceField",
+                  "label": "选择默认值来源字段",
+                  "component": "FieldSelect",
+                  "props": {
+                    "placeholder": "请选择来源字段",
+                    "supportType": [1, 2, 3, 4, 5, 7, 19]
+                  },
+                  "validator": {
+                    "required": true
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "disableNativeCellOperate": true,
+      "showNativeFieldEditor": false,
+      "presetFieldConfig": {
+        "fieldProperty": {
+          "dataType": {
+            "type": 1
+          }
+        }
+      }
+    }
+  ]
+}
